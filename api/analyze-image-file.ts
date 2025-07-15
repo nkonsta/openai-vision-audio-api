@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { analyzeImageFileHandler } from '../src/handlers/index';
+import { analyzeImageFileHandler } from '../src/handlers/index.js';
 import formidable from 'formidable';
 import fs from 'fs';
 

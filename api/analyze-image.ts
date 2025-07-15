@@ -1,5 +1,5 @@
 import { VercelRequest, VercelResponse } from '@vercel/node';
-import { analyzeImageHandler } from '../src/handlers/index';
+import { analyzeImageHandler } from '../src/handlers/index.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   if (req.method !== 'POST') {
