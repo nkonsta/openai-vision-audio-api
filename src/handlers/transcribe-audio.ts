@@ -1,5 +1,5 @@
-import { transcribeAudio } from './openai-utils';
-import { TranscribeAudioResponse, ErrorResponse } from './types';
+import { transcribeAudio } from './openai-utils.js';
+import { TranscribeAudioResponse, ErrorResponse } from './types.js';
 
 export interface AudioFile {
   buffer: Buffer;

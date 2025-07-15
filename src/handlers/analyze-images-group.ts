@@ -1,5 +1,5 @@
-import { analyzeMultipleImages } from './openai-utils';
-import { AnalyzeImagesGroupResponse, ErrorResponse, ImageBufferData, ALLOWED_IMAGE_MIME_TYPES } from './types';
+import { analyzeMultipleImages } from './openai-utils.js';
+import { AnalyzeImagesGroupResponse, ErrorResponse, ImageBufferData, ALLOWED_IMAGE_MIME_TYPES } from './types.js';
 
 export interface ImageFile {
   buffer: Buffer;

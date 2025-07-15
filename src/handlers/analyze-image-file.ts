@@ -1,5 +1,5 @@
-import { analyzeImage } from './openai-utils';
-import { AnalyzeImageResponse, ErrorResponse } from './types';
+import { analyzeImage } from './openai-utils.js';
+import { AnalyzeImageResponse, ErrorResponse } from './types.js';
 
 export interface MultipartFile {
   buffer: Buffer;
