@@ -1,10 +1,19 @@
 {
   "name": "ai-vision",
-  "builds": [
-    { "src": "Dockerfile", "use": "@vercel/docker" }
-  ],
+  "functions": {
+    "api/*.ts": {
+      "runtime": "@vercel/node",
+      "maxDuration": 300
+    }
+  },
   "env": {
-    "OPENAI_API_KEY": "@openai_api_key",
-    "PORT": "3000"
-  }
+    "OPENAI_API_KEY": "@openai_api_key"
+  },
+  "rewrites": [
+    { "source": "/analyze-image", "destination": "/api/analyze-image" },
+    { "source": "/analyze-image-file", "destination": "/api/analyze-image-file" },
+    { "source": "/transcribe-audio", "destination": "/api/transcribe-audio" },
+    { "source": "/analyze-images-group", "destination": "/api/analyze-images-group" },
+    { "source": "/server-status", "destination": "/api/server-status" }
+  ]
 } 
