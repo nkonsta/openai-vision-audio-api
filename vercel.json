@@ -1,10 +1,14 @@
 {
-  "functions": {
-    "api/*.ts": {
-      "maxDuration": 300,
-      "memory": 1024
+  "builds": [
+    {
+      "src": "api/*.ts",
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 300,
+        "memory": 1024
+      }
     }
-  },
+  ],
   "rewrites": [
     { "source": "/analyze-image", "destination": "/api/analyze-image" },
     { "source": "/analyze-image-file", "destination": "/api/analyze-image-file" },
