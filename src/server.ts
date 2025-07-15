@@ -12,7 +12,7 @@ import {
   AnalyzeImageResponse,
   ErrorResponse,
   ALLOWED_IMAGE_MIME_TYPES
-} from './handlers/index.js';
+} from './handlers/index';
 
 dotenv.config();
 
