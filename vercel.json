@@ -1,7 +1,18 @@
 {
   "functions": {
     "api/*.ts": {
-      "maxDuration": 300
+      "maxDuration": 300,
+      "memory": 1024
     }
-  }
+  },
+  "builds": [
+    { "src": "api/*.ts", "use": "@vercel/node" }
+  ],
+  "rewrites": [
+    { "source": "/analyze-image", "destination": "/api/analyze-image" },
+    { "source": "/analyze-image-file", "destination": "/api/analyze-image-file" },
+    { "source": "/analyze-images-group", "destination": "/api/analyze-images-group" },
+    { "source": "/transcribe-audio", "destination": "/api/transcribe-audio" },
+    { "source": "/server-status", "destination": "/api/server-status" }
+  ]
 } 
