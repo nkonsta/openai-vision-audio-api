@@ -1,0 +1,10 @@
+{
+  "name": "ai-vision",
+  "builds": [
+    { "src": "Dockerfile", "use": "@vercel/docker" }
+  ],
+  "env": {
+    "OPENAI_API_KEY": "@openai_api_key",
+    "PORT": "3000"
+  }
+} 
