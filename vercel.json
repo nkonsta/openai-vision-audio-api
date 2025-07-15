@@ -1,15 +1,7 @@
 {
-  "name": "ai-vision",
   "functions": {
     "api/*.ts": {
       "maxDuration": 300
     }
-  },
-  "rewrites": [
-    { "source": "/analyze-image", "destination": "/api/analyze-image" },
-    { "source": "/analyze-image-file", "destination": "/api/analyze-image-file" },
-    { "source": "/transcribe-audio", "destination": "/api/transcribe-audio" },
-    { "source": "/analyze-images-group", "destination": "/api/analyze-images-group" },
-    { "source": "/server-status", "destination": "/api/server-status" }
-  ]
+  }
 } 
