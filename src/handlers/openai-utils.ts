@@ -1,7 +1,7 @@
 import fetch from 'node-fetch';
 import FormData from 'form-data';
 import dotenv from 'dotenv';
-import { ImageBufferData } from './types.js';
+import { ImageBufferData } from './types';
 
 // Ensure environment variables are loaded
 dotenv.config();

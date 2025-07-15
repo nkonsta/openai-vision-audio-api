@@ -1,5 +1,5 @@
-import { analyzeImage } from './openai-utils.js';
-import { AnalyzeImageRequest, AnalyzeImageResponse, ErrorResponse } from './types.js';
+import { analyzeImage } from './openai-utils';
+import { AnalyzeImageRequest, AnalyzeImageResponse, ErrorResponse } from './types';
 
 export const analyzeImageHandler = async (requestBody: AnalyzeImageRequest): Promise<AnalyzeImageResponse | ErrorResponse> => {
   const { base64Image, concepts } = requestBody;
