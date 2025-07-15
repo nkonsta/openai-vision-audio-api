@@ -1,14 +1,12 @@
 {
-  "functions": {
-    "api/*.ts": {
-      "maxDuration": 300,
-      "memory": 1024
-    }
-  },
   "builds": [
     {
       "src": "api/*.ts",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "maxDuration": 300,
+        "memory": 1024
+      }
     }
   ],
   "rewrites": [
