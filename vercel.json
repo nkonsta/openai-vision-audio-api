@@ -6,9 +6,6 @@
       "maxDuration": 300
     }
   },
-  "env": {
-    "OPENAI_API_KEY": "@openai_api_key"
-  },
   "rewrites": [
     { "source": "/analyze-image", "destination": "/api/analyze-image" },
     { "source": "/analyze-image-file", "destination": "/api/analyze-image-file" },
