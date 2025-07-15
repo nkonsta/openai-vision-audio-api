@@ -52,12 +52,14 @@ docker build -t ai-vision .
 docker run -p 3000:3000 --env-file .env ai-vision
 ```
 
-### Deploy to Vercel
-The repo includes a `Dockerfile`, `vercel.json`, and GitHub Action workflow for automatic deployment.
+## Deploy to Vercel
+The repo includes `vercel.json` for serverless deployment using `@vercel/node`. API endpoints are defined in `api/*.ts` as serverless functions.
 
 1. Set `OPENAI_API_KEY` in Vercel **Project → Settings → Environment Variables**.
-2. Add `VERCEL_TOKEN` as a GitHub Actions secret.
-3. Push to the `main` branch – Vercel will build the container and expose your API.
+2. Import your GitHub repo in Vercel dashboard.
+3. Deploy – Vercel handles builds automatically on push.
+
+Post-deploy, test endpoints like `https://your-domain.vercel.app/api/server-status` (should return "Server is running").
 
 The server will start on `http://localhost:3000` (or the port specified in your `.env` file).
 
